@@ -26,6 +26,34 @@ print("The addition of the first 50 prime numbers is: \(sum)")
 // EJERCICIO 3:
 var players: [String] = ["Vinicius", "Messi", "Ronaldo", "Pedri", "Mbappe", "Modric", "Militao", "Morata", "Valverde", "Benzema", "Piqué"]
 
-let playersFiltered = players.filter { $0.contains { $0 == "a" }
+var playersFiltered: [String] = []
+
+func vocals()  -> [String] {
+    var count = 0
+    for i in players {
+        for char in i where char == "a" || char == "e" || char == "i" || char == "o" || char == "u"  {
+            count += 1
+        }
+        if count > 2 {
+            playersFiltered.append(i)
+        }
+        count = 0
+    }
+    return playersFiltered
+    
 }
-print(playersFiltered)
+print("The players with more than two vocals in their names are: \(vocals())")
+    
+// EJERCICIO 4:
+enum Players {
+    case portero
+    case lateralDerecho
+    case central
+    case lateralIzquierdo
+    case medioCentro
+    case extremoDerecha
+    case extremoIzquierda
+    case defensa
+    case centroDelantero
+}
+
