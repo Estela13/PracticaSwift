@@ -45,6 +45,7 @@ func vocals()  -> [String] {
 print("The players with more than two vocals in their names are: \(vocals())")
     
 // EJERCICIO 4:
+
 enum Players {
     case portero
     case lateralDerecho
@@ -57,3 +58,26 @@ enum Players {
     case centroDelantero
 }
 
+// EJERCICIO 5:
+
+class WorldCupMember {
+    var name: String = ""
+    var country: String = ""
+    var role: Role
+    
+    init (name: String = "", country: String = "", role : Role){
+        self.name = name
+        self.country = country
+        self.role = role
+}
+    
+enum Role {
+    case jugador
+    case seleccionador
+    case médico
+    case asistente
+    case arbitro
+    case juezDeLinea
+}
+
+}
